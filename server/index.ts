@@ -4,6 +4,7 @@ import { HTTPException } from "hono/http-exception";
 import { serveStatic } from "@hono/node-server/serve-static";
 
 import { remixMiddleware } from "./middleware/remix";
+import { migrateToLatest } from "./database/migrate-to-last";
 
 const app = new Hono();
 

@@ -11,7 +11,8 @@
     "dev:server": "tsx watch src/index.ts",
     "build:server": "tsc",
     "start:server": "node ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "codegen:db": "pnpm dlx kysely-codegen --out-file=server/database/types.ts"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.0",
@@ -19,8 +20,10 @@
     "@hono/zod-validator": "^0.7.2",
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
+    "better-sqlite3": "^12.2.0",
     "hono": "^4.9.4",
     "isbot": "^5.1.27",
+    "kysely": "^0.28.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.7.1",
@@ -30,6 +33,7 @@
   "devDependencies": {
     "@react-router/dev": "^7.7.1",
     "@tailwindcss/vite": "^4.1.4",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
